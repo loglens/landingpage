@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/x-icon" href="assets/images/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Loglens</title>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js?render=6LfnVTgbAAAAAH2MI-mDLI431lc6wrFgMNQYGWW5"></script> -->
+    <script>
+        grecaptcha.ready(function() {
+        // do request for recaptcha token
+        // response is promise with passed token
+            grecaptcha.execute('your reCAPTCHA site key here', {action:'validate_captcha'})
+                      .then(function(token) {
+                // add token value to form
+                document.getElementById('g-recaptcha-response').value = token;
+            });
+        });
+    </script>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+
+    <link rel="stylesheet" href="assets/css/templatemo-digimedia-v3.css">
+    <!-- <link rel="stylesheet" href="assets/css/newsletter.css"> -->
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+    
+
+<!-- for newsletter -->
+
+  </head>
+
+
+<body>
+
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo" style="width: 20%;">
+              <img src="assets/images/loglens_logo.png" alt="" style="width: 80%;">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <!-- <li class="scroll-to-section"><a href="#top">Platform</a></li> -->
+              <!-- <li class="scroll-to-section"><a href="blogs.html" target="_blank">Resources</a></li> -->
+              <li class="submenu">
+                <a href="javascript:;">Resources</a>
+                <ul>
+                    <li><a href="blogs.html" target="_blank" style="font-size: 18px;">Blogs</a></li>
+                    <!-- <li><a href="guide1.html" target="_blank" style="font-size: 18px;">Guides</a></li> -->
+                    <li><a href="privacy.html" target="_blank" style="font-size: 18px;">Privacy policy</a></li>
+                </ul>
+            </li>
+              
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+
+  <!-- <div class="grid" id="jsonContent" style="padding-top: 180px; padding-bottom: 120px;">
+  </div> -->
+  <section class="blog_main_area p_100" style="padding-top: 180px; padding-bottom: 120px;">
+    <div class="container">
+        <div class="row" id="jsonContent" style="padding-bottom: 3%;display: flex">
+        </div>
+    </div>
+</section>
+
+
+
+<style>
+  footer {
+  background: #f2f2f2;
+  color: #413e3e;
+}
+
+.contactus i.fa {
+  /* display: inline-block;
+  border-radius: 50px;
+  box-shadow: 0px 0px 2px #888;
+  padding: 0.5em 0.6em;
+  background-color: #FFFFFF; */
+padding-bottom: 5%;
+
+}
+.f-banner{
+  background: #dfdddd;
+  color: #413e3e;
+  text-align: center;
+}
+
+</style>
+
+
+    <footer class="flex-shrink-0" >
+      <div class="container">
+          <div class="row ">
+            <div class="col-lg-8 col-md-6" style="margin-top: 5%;">
+              <h4 class="mb-3">Keep me informed</h4>
+              <!-- <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p> -->
+              <form action="#">
+                  <div class="input-group mb-3" style="width: 75%;">
+                      <input class="form-control" type="text" placeholder="Email" aria-label="Recipient's username" aria-describedby="button-addon2">
+                      <button class="btn btn-primary" id="button-addon2" type="button"><i class="fa fa-paper-plane"></i></button>
+                      <small style="margin-left: 1%;">Your privacy is important to us and we will handle your information in line with our privacy policy.</small>
+                      <div class="g-recaptcha" data-sitekey="6LekhnAbAAAAAFSv3nnA3zKa7R-aW3bpAB3TZW3y" style="margin-left: 1%;"></div>
+                  </div>
+                 
+              </form>
+          </div>
+              <!-- <div class="col-lg-4 col-md-6" >
+                <img src="assets/images/loglens_logo.png" style="width: 70%;">&nbsp;<br>
+                <small>&copy; 2021 LogLens Insights.All rights reserved.</small>
+              </div> -->
+              <div class="col-lg-2 col-md-6 contactus" style="margin-top:5%">
+                <h4 style="padding-bottom: 5%;">Follow us</h4>
+                <i class="fa fa-linkedin-square" aria-hidden="true" style="color: #0e76a8;font-size: 28px;cursor: pointer;" ></i> <br>
+                <i class="fa fa-twitter-square" aria-hidden="true" style="color: #0e76a8;font-size: 28px;cursor: pointer;" ></i>
+            </div>
+          </div>
+      </div>
+  </footer>
+
+<div class="f-banner">
+  <p>&copy; 2021 Loglens insights.All rights reserved.</p>
+</div>
+
+
+
+
+
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/imagesloaded.js"></script>
+  <script src="vendor/typed.js/typed.min.js"></script>
+  <script src="assets/js/moment.js"></script>
+  <script src="assets/js/blog.js"></script>
+  <script src="assets/js/newsletter.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+  </script>
+
+  <script>
+
+    function existingemail(){
+
+    }
+    function signupnewsletter(){
+      console.log("Submit button clicked")
+      let email_ID =  document.getElementById("name-553a")
+      console.log( email_ID.value," email_ID")
+
+      var xhr = new XMLHttpRequest();
+var url = "http://localhost:5000/subscribe/newsletter";
+xhr.open("POST", url, true);
+xhr.setRequestHeader("Content-Type", "application/json");
+xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        var json = JSON.parse(xhr.responseText);
+        // console.log(json.email + ", " + json.password);
+    }
+};
+var data = JSON.stringify({"email": email_ID.value});
+xhr.send(data);
+    }
+  </script>
+
+
+
+</body>
+</html>

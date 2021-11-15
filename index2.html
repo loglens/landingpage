@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/x-icon" href="assets/images/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Loglens</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js?render=6LfnVTgbAAAAAH2MI-mDLI431lc6wrFgMNQYGWW5"></script> -->
+    <script>
+        grecaptcha.ready(function() {
+        // do request for recaptcha token
+        // response is promise with passed token
+            grecaptcha.execute('your reCAPTCHA site key here', {action:'validate_captcha'})
+                      .then(function(token) {
+                // add token value to form
+                document.getElementById('g-recaptcha-response').value = token;
+            });
+        });
+    </script>
+
+
+    <!-- Additional CSS Files -->
+
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+
+    <link rel="stylesheet" href="assets/css/templatemo-digimedia-v3.css">
+
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <style>
+      .owl-nav{
+        display: none !important;
+      }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+}
+.span-col-3{grid-column: span 3 / auto; }
+
+.span-col-4{grid-column: span 4 / auto;}
+
+.span-col-2{grid-column: span 2 / auto;}
+
+.span-col-5{grid-column: span 5 / auto;}
+      </style>
+    <style>.lp_homepage-type-2 .custom-logos-list .fix-big-logos img, .custom-logos-list.sc_info_section .bottom_block .fix-big-logos img{
+      margin: 1.5rem auto;
+  }
+  .form-section, .sc_custom_landing_template .sc_footer_custom.form-section {
+      margin-top: 7.5rem;
+  }
+  .custom-logos-list p {
+      margin-bottom: 0;
+  }
+  .lp_homepage-type-2 .sc_custom_header .row {
+      align-items: center !important;
+  }
+  .lp_homepage-type-2 .columns-row .col-sm-12:last-child {
+      padding: 0;
+  }
+  .lp_homepage-type-2 .default-quote blockquote h3 {
+      margin-bottom: 13px;
+  }
+  .lp_homepage-type-2 .sc_top_custom_section_1 {
+      padding: 3rem 1rem 0;
+  }
+  .lp_homepage-type-2 .sc_top_custom_section {
+      padding: 9rem 1rem 0;
+  }
+  .lp_homepage-type-2 .sc_custom_header h1 {
+      font-size: 2.9rem;
+  }
+  .lp_homepage-type-2 .sc_custom_header {
+      padding: 2.5rem 0rem 0;
+  }
+  .lp_homepage-type-2 .sc_custom_header .container-default {
+      max-width: 1920px;
+      padding: 0;
+  }
+  .lp_homepage-type-2 .sc_top_custom_section_1 .text_block.left_block {
+      max-width: 650px;
+      margin: inherit;
+      margin-left: auto;
+  }
+  
+  /*Custom bottom block*/
+  .lp_homepage-type-2 .sc_custom_section_2 .text_block .sc_custom_block {
+      font-size: 3rem;
+      line-height: normal;
+      font-weight: 600;
+      color: #F97143;
+      background-color: #FEF3EF;
+      max-width: 426px;
+      margin: auto;
+      padding: 13px 0 0;
+  }
+  .lp_homepage-type-2 .sc_custom_section_2 .text_block .sc_custom_block>strong {
+      font-size: 2rem;
+      color: #F97143;
+  }
+  .lp_homepage-type-2 .sc_custom_section_2 .with-columns>div:nth-child(2) .text_block .sc_custom_block {
+      background-color: #EFF4EB;
+      color: #79A359;
+  }
+  .lp_homepage-type-2 .sc_custom_section_2 .with-columns>div:nth-child(3) .text_block .sc_custom_block {
+      background-color: #F1F4F8;
+      color: #5C93CA;
+  }
+  .lp_homepage-type-2 .sc_custom_section_2 .with-columns>div:nth-child(2) .text_block .sc_custom_block>strong {
+      color: #79A359;
+  }
+  .lp_homepage-type-2 .sc_custom_section_2 .with-columns>div:nth-child(3) .text_block .sc_custom_block>strong {
+      color: #5C93CA;
+  }
+  .lp_homepage-type-2 .sc_custom_section_2 .text_block {
+      margin: 1.5rem 0;
+  }
+  .lp_homepage-type-2 .sc_custom_section_2 .text_block h6 {
+      background-color: #FEF3EF;
+      color: #F97143;
+      font-size: 16px;
+      line-height: 21px;
+      padding: 14px 1rem;
+      max-width: 426px;
+      margin: auto;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+  }
+  .lp_homepage-type-2 .sc_custom_section_2 .with-columns>div:nth-child(2) h6 {
+      background-color: #EFF4EB;
+      color: #79A359;
+  }
+  .lp_homepage-type-2 .sc_custom_section_2 .with-columns>div:nth-child(3) h6 {
+      background-color: #F1F4F8;
+      color: #5C93CA;
+  }
+  .lp_homepage-type-2 .sc_custom_section_2 .r_html_block .text_block>*:last-child {
+      background-color: #FEF3EF;
+      max-width: 426px;
+      margin: auto;
+      padding: 0 1rem 1.2rem;
+  }
+  .lp_homepage-type-2 .sc_custom_section_2 .with-columns>div:nth-child(2) .text_block>*:last-child {
+      background-color: #EFF4EB;
+  }
+  .lp_homepage-type-2 .sc_custom_section_2 .with-columns>div:nth-child(3) .text_block>*:last-child {
+      background-color: #F1F4F8;
+  }
+  
+  .lp_homepage-type-2 .sc_custom_section_2 .text_block .with-shadow {
+      background-color: #FFFFFF;
+      box-shadow: 0px 5px 35px rgba(146, 146, 146, 0.2);
+      -webkit-border-radius: 5px;
+      -ms-border-radius: 5px;
+      border-radius: 5px;
+      padding: 3rem 1rem;
+  }
+  .lp_homepage-type-2 .sc_custom_section_2 .text_block .with-shadow>*:last-child {
+      margin-bottom: 0;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+  }
+  .lp_homepage-type-2 .sc_top_custom_section_1 {
+      background-image: url("/wp-content/uploads/2021/08/bg-top-section-homepage.svg");
+  }
+  
+  @media (max-width: 1679px) { 
+  .lp_homepage-type-2 .sc_custom_header p>br {
+      display: none;
+  }
+  .lp_homepage-type-2 .sc_custom_header .text_block {
+      padding-right: 1.75rem;
+      padding-left: 15px;
+  }
+  .lp_homepage-type-2 .sc_custom_section_2 .text_block h6, .lp_homepage-type-2 .sc_custom_section_2 .text_block .sc_custom_block, .lp_homepage-type-2 .sc_custom_section_2 .r_html_block .text_block>*:last-child {
+      max-width: 100%;
+      margin: 0 1rem;
+  }
+  }
+  @media (max-width: 1439px) {
+  .lp_homepage-type-2 .sc_custom_header h1 {
+      font-size: 2.78rem;
+  }
+  }
+  @media (max-width: 1279px) { 
+  .lp_homepage-type-2 .sc_custom_header h1 {
+      font-size: 2.68rem;
+  }
+  .lp_homepage-type-2 .sc_custom_header .row {
+      align-items: flex-end !important;
+  }
+  .lp_homepage-type-2 .sc_custom_header .text_block {
+      padding-right: 15px;
+      padding-left: 15px;
+  }
+  }
+  @media (max-width: 1023px) { 
+  .lp_homepage-type-2 .sc_custom_header .img_block {
+      display: none;
+  }
+  .lp_homepage-type-2 .sc_top_custom_section_1 .text_block.right_block {
+      max-width: 100%;
+      text-align: center;
+  }
+  .lp_homepage-type-2 .sc_top_custom_section_1 .text_block.left_block {
+      max-width: 100%;
+      padding-bottom: 0;
+  }
+  .lp_homepage-type-2 .sc_top_custom_section_1 {
+      padding: 4rem 1rem 0;
+  }
+  }
+  @media (max-width: 767px) {
+  .lp_homepage-type-2 .sc_custom_header h1 {
+      font-size: 30px;
+  }
+  .lp_homepage-type-2 .sc_custom_header .row>.col-lg-6:nth-child(1) {
+      order: 2;
+  }
+  .lp_homepage-type-2 .sc_custom_header .row>.col-lg-6:nth-child(2) {
+      order: 1;
+  }
+  }
+  
+  .cta {
+      margin-top: 10rem;
+      margin-bottom: 5rem;
+  }
+  .cta .col-lg-6 {
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+  .lp_homepage-type-2 .sc_custom_section_2 .cta .text_block {
+      margin: auto;
+  }
+  .cta .text_block {
+      text-align: center;
+      background-image: url(/wp-content/uploads/2021/10/bg-new-cta.svg);
+      background-size: contain;
+      min-height: 34.4rem;
+      align-items: center;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 1471px;
+  }
+  
+  @media (max-width: 1679px) { 
+  .cta .text_block {
+      min-height: 32.1rem;
+      background-repeat: no-repeat;
+  }
+  }
+  @media (max-width: 1023px) { 
+  .cta .text_block {
+      min-height: 21.1rem;
+      background-image: none!important;
+  }
+  .cta {
+      margin-top: 5rem;
+      margin-bottom: 3rem;
+  }
+  }
+  #chartdiv {
+  width: 120%;
+  height: 430px;
+  /* display:none !important */
+}
+
+.grid { visibility: hidden; }
+/* Prevents :hover from triggering in the gaps between items */
+
+.grid > * { visibility: visible; }
+/* Brings the child items back in, even though the parent is `hidden` */
+
+.grid > * { transition: opacity 150ms linear 100ms, transform 150ms ease-in-out 100ms; }
+/* Makes the fades smooth with a slight delay to prevent jumps as the mouse moves between items */
+
+.grid:hover > * { opacity: 0.4; transform: scale(0.9); }
+/* Fade out all items when the parent is hovered */
+
+.grid > *:hover { opacity: 1; transform: scale(1); transition-delay: 0ms, 0ms; }
+  </style>
+<!--
+
+TemplateMo 568 DigiMedia
+
+https://templatemo.com/tm-568-digimedia
+
+-->
+  </head>
+
+<body>
+  <div class="container">
+    <div class="row">
+<div class="col-lg-3">
+  <div class="r_html_block">
+
+  </div>
+
+</div>
+    </div>
+
+  </div>
+
+
+  <div class="sc_page sc_homepage_template default_list lp_homepage-type-2" style="padding-bottom: 80px;margin-right: 45px;margin-left: 45px">
+                    <section class="sc_custom_section_2 sc_fadeIn" >
+                <div class="container-fluid container-default">
+                                            <div class="align-self-center columns-row" id="step-3">
+                            <div class="col-sm-12 ">
+                                                                    <div class="section-heading">
+                                        <h4 style="text-align: center;">Benefit from improved outcomes</h4>
+                                    </div>
+                            </div>
+                            <div class="col-sm-12">
+                                                                    <div class="r_html_block">
+                                        <div class="container-fluid container-default">
+                                            <div class="row with-columns">
+                            <div class="col-lg-3">
+                                <div class="text_block left_block"><h6 style="text-align: center;"></h6>
+                                 
+<div class="sc_custom_block" style="text-align: center;">25<strong>%</strong></div>
+<p style="text-align: center;"><strong>From pro-active interventions​ <br><br></strong></p>
+<!-- <p style="text-align: center;"><strong>From pro-active interventions​ </strong></p> -->
+</div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="text_block mid_block"><h6 style="text-align: center;"></h6>
+<div class="sc_custom_block" style="text-align: center;">11<strong>%</strong></div>
+<p style="text-align: center;"><strong>From pipeline management  ​<br><br></strong></p>
+</div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="text_block right_block"><h6 style="text-align: center;"></h6>
+<!-- <div class="with-shadow">
+<h3 style="text-align: center;"> Sales contributors</h3>
+<p style="text-align: center;">Win faster and more confidenty with 
+step-by-step guidance</p>
+</div> -->
+<div class="sc_custom_block" style="text-align: center;">32<strong>%</strong></div>
+<p style="text-align: center;"><strong>From Marketing and sales alignment </strong></p>
+</div>
+                            </div>
+                            <div class="col-lg-3">
+                              <div class="text_block right_block"><h6 style="text-align: center;"></h6>
+<!-- <div class="with-shadow">
+<h3 style="text-align: center;"> Sales contributors</h3>
+<p style="text-align: center;">Win faster and more confidenty with 
+step-by-step guidance</p>
+</div> -->
+<div class="sc_custom_block" style="text-align: center;">10<strong>%</strong></div>
+<p style="text-align: center;"><strong>From renewals and cross-sells<br><br></strong></p>
+</div>
+                          </div>
+                        </div>
+                                    </div>                                    </div>
+                            </div>
+                        </div>
+                                    </div>
+            </section>
+    </div>
+
+<style>
+  footer {
+  background: #f2f2f2;
+  color: #413e3e;
+}
+
+</style>
+
+    <footer class="w-100 py-4 flex-shrink-0" >
+      <div class="container py-4">
+          <div class="row gy-4 gx-5">
+            <div class="col-lg-6 col-md-6" style="">
+              <h3 class="mb-3" >Keep me informed</h3>
+              <!-- <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p> -->
+              <form action="#">
+                  <div class="input-group mb-3" style="width: 75%;">
+                      <input class="form-control" type="text" placeholder="Email" aria-label="Recipient's username" aria-describedby="button-addon2">
+                      <button class="btn btn-primary" id="button-addon2" type="button"><i class="fa fa-paper-plane"></i></button>
+                      <small> &nbsp;Your privacy is important to us and we will handle your &nbsp;information in line with our Privacy Policy.</small>
+                      <div class="g-recaptcha" data-sitekey="6LekhnAbAAAAAFSv3nnA3zKa7R-aW3bpAB3TZW3y"></div>
+                  </div>
+                 
+              </form>
+          </div>
+              <div class="col-lg-4 col-md-6" >
+                <img src="assets/images/icon.png" style="width: 30%;margin-bottom: 5%;"> &nbsp;<span style="font-size: 2.3rem;">Loglens</span>
+                  <p class="small">&copy; 2021 LogLens Insights.All rights reserved. </p>
+              </div>
+              <div class="col-lg-2 col-md-6" >
+                <p style="font-size: 20px;">Contact us</p>
+                <!-- <h5 class="h1 text-white" >Loglens</h5> -->
+                <!-- <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p> -->
+                <i class="fa fa-facebook-square" aria-hidden="true" style="color: #4267B2; font-size: 24px;"></i> 
+                <i class="fa fa-linkedin-square" aria-hidden="true" style="color: #0e76a8;font-size: 24px;" ></i>
+                <!-- <p class="small">&copy; 2021 LogLens Insights.All rights reserved. </p> -->
+            </div>
+              <!-- <div class="col-lg-2 col-md-6">
+                  <h5 class="text-white mb-3">Quick links</h5>
+                  <ul class="list-unstyled text-muted">
+                      <li><a href="#">Real-time deals</a></li>
+                      <li><a href="#">KPI benchmarking</a></li>
+                      <li><a href="#">Corelated real-time insights</a></li>
+                      <li><a href="#">Deal rooms</a></li>
+                  </ul>
+              </div> -->
+              <!-- <div class="col-lg-2 col-md-6">
+                  <h5 class="text-white mb-3">Quick links</h5>
+                  <ul class="list-unstyled text-muted">
+                      <li><a href="#">Collabration workflows</a></li>
+                      <li><a href="#">Accelaration playbook</a></li>
+                      <li><a href="#">Activity monitering</a></li>
+                      <li><a href="#">FAQ</a></li>
+                  </ul>
+              </div> -->
+
+          </div>
+      </div>
+  </footer>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/imagesloaded.js"></script>
+  <script src="vendor/typed.js/typed.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js">
+</script>
+
+<script>
+  am4core.addLicense("ch-custom-attribution")
+  var chart = am4core.create("chartdiv", am4charts.TreeMap);
+
+chart.hiddenState.properties.opacity = 0; // this makes initial fade in effect
+
+chart.data =[
+{
+  name: "Second",
+  children: [
+    {
+      name: "KPI benchmarking",
+      value: 215,
+      color:"#c6c1c2",
+      section:"Benchmark"
+    }
+  ]
+},
+{
+  name: "Third",
+  children: [
+    {
+      name: "Real-time “deals” journey view",
+      value: 400,
+      color:"#fed58b",
+      section:"Collaborate"
+    }
+  ]
+},
+{
+  name: "Fourth",
+  children: [
+    {
+      name: "Intervention playbook",
+      value: 215,
+      color:"#9bb6dc",
+      section:"Intervene"
+    }
+  ]
+},
+{
+  name: "Fifth",
+  children: [
+    {
+      name: "Activity monitoring",
+      value: 340,
+      color:"#9bb6dc",
+      section:"Intervene"
+    }
+  ]
+},
+{
+  name: "Six",
+  children: [
+    {
+      name: "Co-related real-time insights",
+      value: 400,
+      color:"#5985c4",
+      section:"Intervene"
+    }
+  ]
+},
+{
+  name: "Seven",
+  children: [
+    {
+      name: "Automated workflows",
+      value: 290,
+      color:"#5985c4",
+      section:"Intervene"
+    }
+  ]
+},
+  {
+  name: "eight",
+  children: [
+    {
+      name: "Collaboration deal-rooms ",
+      value: 340,
+      color:"#c6c1c2",
+      section:"deals"
+    }
+  ]
+},
+];
+//  [{
+//   name: "First",
+//   children: [
+//     {
+//       name: "Real-time “deals” journey view",
+//       value: 100,
+//       color:"#a09799",
+//       section:"deals"
+//     }
+//   ]
+// },
+// {
+//   name: "Second",
+//   children: [
+//     {
+//       name: "KPI benchmarking",
+//       value: 40,
+//       color:"#5985c4",
+//       section:"Benchmark"
+//     }
+//   ]
+// },
+// {
+//   name: "Third",
+//   children: [
+//     {
+//       name: "Collaboration deal-rooms",
+//       value: 40,
+//       color:"#a09799",
+//       section:"Collaborate"
+//     }
+//   ]
+// },
+// {
+//   name: "Fourth",
+//   children: [
+//     {
+//       name: "Intervention playbook",
+//       value: 40,
+//       color:"#5985c4",
+//       section:"Intervene"
+//     }
+//   ]
+// },
+// {
+//   name: "Fifth",
+//   children: [
+//     {
+//       name: "Activity monitoring",
+//       value: 40,
+//       color:"#5985c4",
+//       section:"Intervene"
+//     }
+//   ]
+// },
+// {
+//   name: "Six",
+//   children: [
+//     {
+//       name: "Co-related real-time insights",
+//       value: 40,
+//       color:"#5985c4",
+//       section:"Intervene"
+//     }
+//   ]
+// },
+// {
+//   name: "Seven",
+//   children: [
+//     {
+//       name: "Automated work flows",
+//       value: 40,
+//       color:"#5985c4",
+//       section:"Intervene"
+//     }
+//   ]
+// },
+// ];
+
+chart.colors.step = 1;
+
+// define data fields
+chart.dataFields.value = "value";
+chart.dataFields.name = "name";
+chart.dataFields.children = "children";
+chart.dataFields.color = "color"
+chart.fontSize = 17;
+
+chart.zoomable = false;
+// chart1.padding(0,0,0,0);
+// chart2.padding(15,0,0,0);
+var bgColor = new am4core.InterfaceColorSet().getFor("background");
+
+// level 0 series template
+var level0SeriesTemplate = chart.seriesTemplates.create("0");
+var level0ColumnTemplate = level0SeriesTemplate.columns.template;
+level0SeriesTemplate.hiddenState.transitionDuration = 500;
+level0SeriesTemplate.hiddenState.transitionEasing = am4core.ease.elasticInOut;
+// level0ColumnTemplate.column.cornerRadius(0, 0, 0, 0);
+level0ColumnTemplate.fillOpacity = 0;
+level0ColumnTemplate.strokeWidth = 4;
+level0ColumnTemplate.strokeOpacity = 0;
+
+// level 1 series template
+var level1SeriesTemplate = chart.seriesTemplates.create("1");
+
+var level1ColumnTemplate = level1SeriesTemplate.columns.template;
+level1ColumnTemplate.events.on("hit", function(ev) {
+  console.log("clicked on ", ev.target);
+  console.log("clicked on ", ev.target.dataItem.dataContext.dataContext.section);
+  scrolltosection(ev.target.dataItem.dataContext.dataContext.section)
+}, this);
+var hoverState = level1ColumnTemplate.states.create("hover");
+
+// darken
+hoverState.adapter.add("fill", function (fill, target) {
+  if (fill instanceof am4core.Color) {
+    console.log(fill,"fill")
+    return am4core.color(am4core.colors.brighten(fill.rgb, -0.2));
+  }
+  // return fill;
+  return am4core.color(am4core.colors.brighten(fill.rgb, 1));
+})
+// level1ColumnTemplate.events.on("over", function(ev) {
+//   var dataItem = chart.dataItems.getIndex(0);
+//   console.log("dataitem",dataItem)
+
+// }, this);
+
+// level1ColumnTemplate.events.on("out", function(ev) {
+//   ev.target.dataItem.dataContext.dataContext.value = 90
+// //   setInterval(function () {
+// // 	for (var i = 0; i < chart.dataItems.length; i++) {
+// // 		var dataItem = chart.dataItems.getIndex(i);
+// // 		for (var c = 0; c < dataItem.children.length; c++) {
+// // 			var child = dataItem.children.getIndex(c);
+// // 			child.value = child.value + Math.round(child.value * Math.random() * 0.4 - 0.2);
+// // 		}
+// // 	}
+// // }, 2000)
+// }, this);
+
+// setInterval(function () {
+//   for (var i = 0; i < chart.dataItems.length; i++) {
+//     var dataItem = chart.dataItems.getIndex(i);
+//     for (var c = 0; c < dataItem.children.length; c++) {
+//       var child = dataItem.children.getIndex(c);
+//       child.value = child.value + Math.round(child.value * Math.random() * 0.4 - 0.2);
+//     }
+//   }
+// }, 2000)
+
+
+level1SeriesTemplate.tooltip.animationDuration = 0;
+level1SeriesTemplate.strokeOpacity = 1;
+level1SeriesTemplate.tooltip.disabled = true
+
+level1ColumnTemplate.column.cornerRadius(0, 0, 0, 0)
+level1ColumnTemplate.fillOpacity = 1;
+level1ColumnTemplate.strokeWidth = 3;
+level1ColumnTemplate.stroke = bgColor;
+
+
+var bullet1 = level1SeriesTemplate.bullets.push(new am4charts.LabelBullet());
+bullet1.locationY = 0.5;
+bullet1.locationX = 0.5;
+bullet1.label.truncate = false
+bullet1.label.wrap = true
+bullet1.label.text = "{name}";
+bullet1.label.fill = am4core.color("#000000");
+bullet1.label.text.align = "justify"
+
+
+chart.maxLevels = 2;
+</script>
+
+<script>
+  function scrolltosection(id){
+    location.href = "#"+id
+  }
+</script>
+
+</body>
+</html>
