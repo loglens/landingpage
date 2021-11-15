@@ -55,6 +55,19 @@
 .span-col-2{grid-column: span 2 / auto;}
 
 .span-col-5{grid-column: span 5 / auto;}
+      .grid { visibility: hidden; }
+/* Prevents :hover from triggering in the gaps between items */
+
+.grid > * { visibility: visible; }
+/* Brings the child items back in, even though the parent is `hidden` */
+
+.grid > * { transition: opacity 150ms linear 100ms, transform 150ms ease-in-out 100ms; }
+/* Makes the fades smooth with a slight delay to prevent jumps as the mouse moves between items */
+
+.grid:hover > * { opacity: 0.4; transform: scale(0.9); }
+/* Fade out all items when the parent is hovered */
+
+.grid > *:hover { opacity: 1; transform: scale(1); transition-delay: 0ms, 0ms; }
       </style>
 <!--
 
